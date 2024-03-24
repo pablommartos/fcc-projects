@@ -2,7 +2,7 @@ const checkBtn = document.getElementById("check-btn");
 const textInput = document.getElementById("text-input");
 
 const checkPalindrome = () => {
-    let inputValue = textInput.value.toLowerCase().replace(/\s/g, '');
+    let inputValue = textInput.value.toLowerCase().replace(/\s/g, '').replace(/^_/, '').replace(/[^a-z0-9]/gi, '');
   if (inputValue === "") {
     alert("Please input a value");
   } else if (inputValue.length === 1 && /[A-Z][a-z]/) {
